@@ -3,8 +3,8 @@ import sinon from 'sinon';
 import { Model } from 'mongoose';
 import CarService from '../../../src/Services/CarService';
 
-describe('Teste a busca por todos os carros', function () {
-  it('Teste a busca de todos os carros com SUCESSO', async function () {
+describe('Teste a criação de um carro', function () {
+  it('Teste a criação de um carro com SUCESSO', async function () {
     // Arrange
     const inputCar = {
       model: 'Marea',
