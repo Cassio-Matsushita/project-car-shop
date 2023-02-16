@@ -9,8 +9,15 @@ routes.get('/cars', (req, res, next) => new CarController(req, res, next).getAll
 routes.get('/cars/:id', (req, res, next) => new CarController(req, res, next).getById());
 routes.put('/cars/:id', (req, res, next) => new CarController(req, res, next).getByIdAndUpdate());
 
-routes.post('/motorcycles', (req, res, next) => 
-  new MotorcycleController(req, res, next).create());
+routes.post('/motorcycles', (req, res, next) => new MotorcycleController(req, res, next).create());
 routes.get('/motorcycles', (req, res, next) => new MotorcycleController(req, res, next).getAll());
+routes.get(
+  '/motorcycles/:id',
+  (req, res, next) => new MotorcycleController(req, res, next).getById(),
+);
+routes.put(
+  '/motorcycles/:id',
+  (req, res, next) => new MotorcycleController(req, res, next).getByIdAndUpdate(),
+);
 
 export default routes;
